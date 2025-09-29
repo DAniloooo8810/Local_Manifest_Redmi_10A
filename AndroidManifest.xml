@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Tu repositorio en GitHub -->
+  <remote name="DAniloooo8810"
+          fetch="https://github.com/DAniloooo8810" />
+
+  <!-- Repositorios oficiales de Evolution X -->
+  <remote name="EvolutionX"
+          fetch="https://github.com/Evolution-X-Devices" />
+
+  <!-- Kernel -->
+  <project path="kernel/xiaomi/dandelion"
+           name="android_kernel_xiaomi_dandelion"
+           remote="EvolutionX"
+           clone-depth="1"
+           revision="evo-14" />
+
+  <!-- Device tree -->
+  <project path="device/xiaomi/dandelion"
+           name="android_device_xiaomi_dandelion"
+           remote="EvolutionX"
+           clone-depth="1"
+           revision="evo-14" />
+
+  <!-- Common device tree (SoC / plataforma) -->
+  <project path="device/xiaomi/mt6765-common"
+           name="android_device_xiaomi_mt6765-common"
+           remote="EvolutionX"
+           clone-depth="1"
+           revision="evo-14" />
+
+  <!-- Vendor -->
+  <project path="vendor/xiaomi/dandelion"
+           name="android_vendor_xiaomi_dandelion"
+           remote="EvolutionX"
+           clone-depth="1"
+           revision="evo-14" />
+
+  <project path="vendor/xiaomi/mt6765-common"
+           name="android_vendor_xiaomi_mt6765-common"
+           remote="EvolutionX"
+           clone-depth="1"
+           revision="evo-14" />
+
+  <!-- Reemplazo de vendor/aosp -->
+  <remove-project path="vendor/aosp" />
+  <project path="vendor/aosp"
+           name="vendor_aosp"
+           remote="DAniloooo8810"
+           revision="fourteen" />
+
+</manifest>
