@@ -43,11 +43,5 @@
            clone-depth="1"
            revision="evo-14" />
 
-  <!-- Reemplazo de vendor/aosp -->
-  <remove-project path="vendor/aosp" />
-  <project path="vendor/aosp"
-           name="vendor_aosp"
-           remote="DAniloooo8810"
-           revision="fourteen" />
 
 </manifest>
