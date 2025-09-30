@@ -1,47 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  
+  <!-- Remotes -->
+  <remote name="Jayed" fetch="https://github.com/Jayedkhan800" />
+  <remote name="los" fetch="https://github.com/LineageOS" />
+   
+  <!-- Device Trees -->
+  <!--project path="device/xiaomi/blossom" name="android_device_xiaomi_blossom" remote="Jayed" revision="lineage_23.0" /-->
 
-  <!-- Tu repositorio en GitHub -->
-  <remote name="DAniloooo8810"
-          fetch="https://github.com/DAniloooo8810" />
+  <!-- SELinux policies -->
+  <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="Jayed" revision="sixteen" />
 
-  <!-- Repositorios oficiales de Evolution X -->
-  <remote name="EvolutionX"
-          fetch="https://github.com/Evolution-X-Devices" />
+  <!-- Hardware Supports -->
+  <project path="hardware/mediatek" name="android_hardware_mediatek" remote="los" revision="lineage-22.2" />
 
-  <!-- Kernel -->
-  <project path="kernel/xiaomi/dandelion"
-           name="android_kernel_xiaomi_dandelion"
-           remote="EvolutionX"
-           clone-depth="1"
-           revision="evo-14" />
+  <!-- kernel tree -->
+  <project path="device/xiaomi/blossom-kernel" name="device_xiaomi_blossom-kernel" remote="Jayed" revision="sixteen">
+    <linkfile src="headers" dest="kernel/xiaomi/blossom" />
+  </project>
 
-  <!-- Device tree -->
-  <project path="device/xiaomi/dandelion"
-           name="android_device_xiaomi_dandelion"
-           remote="EvolutionX"
-           clone-depth="1"
-           revision="evo-14" />
-
-  <!-- Common device tree (SoC / plataforma) -->
-  <project path="device/xiaomi/mt6765-common"
-           name="android_device_xiaomi_mt6765-common"
-           remote="EvolutionX"
-           clone-depth="1"
-           revision="evo-14" />
-
-  <!-- Vendor -->
-  <project path="vendor/xiaomi/dandelion"
-           name="android_vendor_xiaomi_dandelion"
-           remote="EvolutionX"
-           clone-depth="1"
-           revision="evo-14" />
-
-  <project path="vendor/xiaomi/mt6765-common"
-           name="android_vendor_xiaomi_mt6765-common"
-           remote="EvolutionX"
-           clone-depth="1"
-           revision="evo-14" />
-
+  <!-- Vendor Trees -->
+  <project path="vendor/xiaomi/blossom" name="proprietary_vendor_xiaomi_blossom" remote="Jayed" revision="sixteen" />
 
 </manifest>
