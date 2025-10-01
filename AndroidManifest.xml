@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  
-  <!-- Remotes -->
-  <remote name="Jayed" fetch="https://github.com/Jayedkhan800" />
-  <remote name="los" fetch="https://github.com/LineageOS" />
-   
-  <!-- Device Trees -->
-  <project path="device/xiaomi/blossom" name="android_device_xiaomi_blossom" remote="Jayed" revision="lineage_23.0" />
+  
+  <!-- Remotes -->
+  <remote name="Jayed" fetch="https://github.com/Jayedkhan800" />
+  <remote name="los" fetch="https://github.com/LineageOS" />
+<remote name="guthib" fetch="https://github.com" />
+   
+  <!-- Device Trees -->
+  <project path="device/xiaomi/blossom" name="android_device_xiaomi_blossom" remote="Jayed" revision="lineage_23.0" />
 
-  <!-- SELinux policies -->
-  <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="Jayed" revision="sixteen" />
+  <!-- SELinux policies -->
+  <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="Jayed" revision="sixteen" />
 
-  <!-- Hardware Supports -->
-  <project path="hardware/mediatek" name="android_hardware_mediatek" remote="los" revision="lineage-22.2" />
+  <!-- Hardware Supports -->
+  <project path="hardware/mediatek" name="android_hardware_mediatek" remote="los" revision="lineage-22.2" />
 
-  <!-- kernel tree -->
-  <project path="device/xiaomi/blossom-kernel" name="device_xiaomi_blossom-kernel" remote="Jayed" revision="sixteen">
-    <linkfile src="headers" dest="kernel/xiaomi/blossom" />
-  </project>
+  <!-- kernel tree -->
+  <project path="device/xiaomi/blossom-kernel" name="device_xiaomi_blossom-kernel" remote="Jayed" revision="sixteen">
+    <linkfile src="headers" dest="kernel/xiaomi/blossom" />
+  </project>
 
-  <!-- Vendor Trees -->
-  <project path="vendor/xiaomi/blossom" name="proprietary_vendor_xiaomi_blossom" remote="Jayed" revision="sixteen" />
+  <!-- Vendor Trees -->
+  <project path="vendor/xiaomi/blossom" name="proprietary_vendor_xiaomi_blossom" remote="Jayed" revision="sixteen" />
 
+<project path="packages/apps/RevampedFMRadio" name="iusmac/RevampedFMRadio" remote="guthib" revision="mtk" clone-depth="1" />
 </manifest>
